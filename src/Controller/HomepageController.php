@@ -13,7 +13,7 @@ class HomepageController extends AbstractController
     #[Route('/', name: 'app_homepage')]
     public function index(apiService $apiService): Response
     {
-        $apiService->connect();
+       dd( $apiService->connect());
         return $this->render('homepage/index.html.twig');
     }
 
@@ -25,7 +25,7 @@ class HomepageController extends AbstractController
     #[Route('/load_data', name: 'app_load_data')]
     public function load(apiService $apiService): Response
     {
-        $apiService->loadData();
+
         return $this->render('homepage/index.html.twig');
     }
 }
