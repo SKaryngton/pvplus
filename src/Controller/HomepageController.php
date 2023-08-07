@@ -17,11 +17,7 @@ class HomepageController extends AbstractController
         return $this->render('homepage/index.html.twig');
     }
 
-    #[Route('/home', name: 'app_home')]
-    public function home(apiService $apiService): Response
-    {
-        return $this->render('homepage/index.html.twig');
-    }
+
 
     /**
      * @throws Exception
